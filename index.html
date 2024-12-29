@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Website</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black text */
+    }
+
+    nav {
+      background-color: #000000; /* Black */
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff; /* White text */
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #cccccc; /* Light gray for hover effect */
+    }
+
+    .page {
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #000000; /* Black */
+    }
+
+    section p {
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #000000; /* Black */
+      color: #ffffff; /* White text */
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -46,6 +104,12 @@
     <p>&copy; 2024 Simple Website</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
